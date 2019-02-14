@@ -1,0 +1,25 @@
+{
+    "name": "懒人一键复制swage",
+    "manifest_version": 2,
+    "version": "1.0",
+    "description": "懒 点击 复制 ",
+    "author": "cc712",
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+    "background":{
+        "script":["script/background.js"]
+    },
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_title": "点击搜索",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "tabs"
+    ],
+    "content_scripts": [{
+        "matches": ["http://test.ysbang.cn/*/swagger*", "https://test.ysbang.cn/*/swagger*"],
+        "css": ["style/content_insert.css"],
+        "js": ["script/content_insert.js"],
+        "run_at": "document_idle"
+    }]
+}

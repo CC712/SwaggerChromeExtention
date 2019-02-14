@@ -1,0 +1,68 @@
+.swage_copy {
+    color: red !important;
+    cursor: pointer;
+    /* animation: bump 1s infinite;     */
+}
+
+/* transform scale 只对块级元素有效 */
+
+@keyframes colorful {
+    0% {
+        color: red;
+    }
+    25% {
+        color: yellow;
+    }
+    50% {
+        color: blue;
+    }
+    75% {
+        color: green;
+    }
+    100% {
+        color: red;
+    }
+}
+
+.swage_copy:hover {
+    animation: colorful 1s infinite;
+    text-decoration: none !important;
+}
+
+@keyframes bump {
+    from {
+        transform: scale(0.8);
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
+
+.swage_panel {
+    position: fixed;
+    right: 20px;
+    bottom: 50px;
+    box-shadow: 0 0 2px 2px #ccc;
+    background: white;
+    width: 50px;
+    height: 50px;
+}
+
+.swage_panel_slide {
+    position: fixed;
+    display: flex;
+    right: 100px;
+    bottom: 50px;
+    box-shadow: 0 0 2px 2px #ccc;
+    background: blue;
+    height: 200px;
+    width: 100px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.swage_btn {
+    color: white !important;
+    cursor: pointer;
+    font-size：12px;
+}
