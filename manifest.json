@@ -17,6 +17,7 @@
         "tabs"
     ],
     "content_scripts": [{
+        //此处修改为适用的域名
         "matches": ["http://test.ysbang.cn/*/swagger*", "https://test.ysbang.cn/*/swagger*"],
         "css": ["style/content_insert.css"],
         "js": ["script/content_insert.js"],
